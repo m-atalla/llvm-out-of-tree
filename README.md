@@ -12,5 +12,6 @@ $ cmake -B build/ -S ./ -GNinja \
 
 $ ninja -C build/
 
-$ <path/to/opt/bin> --load-pass-plugin="<path/to/dynamic/lib>" -passes="<LOADED_PASS_NAME>" <INPUT_IR_FILE>
+# add option `-disable-output` if needed.
+$ <path/to/opt/bin> -load-pass-plugin <path/to/dynamic/lib> -passes="<LOADED_PASS_NAME>" <INPUT_IR_FILE>
 ```
